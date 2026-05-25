@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim - MoveisEco</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Página de Apresentação Pessoal */
+        .navbar {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #c29e6d;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #b19b7b;
+        }
+
+        /* Seção Hero Pessoal */
+        .hero-pessoal {
+            background: linear-gradient(135deg, #8b6f47 0%, #a0845f 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .hero-pessoal h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .hero-pessoal .titulo {
+            font-size: 24px;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        .hero-pessoal p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+        }
+
+        /* Seção Sobre */
+        .about-section {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 30px;
+        }
+
+        .about-section h2 {
+            font-size: 36px;
+            color: #8b6f47;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .about-image .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #e8d4c0 0%, #f5e6d3 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            margin: 0 auto;
+            box-shadow: 0 10px 40px rgba(139, 111, 71, 0.2);
+        }
+
+        .about-text p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Seção Habilidades */
+        .skills-section {
+            background: #f9f5f0;
+            padding: 40px 30px;
+            margin-top: 40px;
+        }
+
+        .skills-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .skills-section h2 {
+            font-size: 28px;
+            color: #8b6f47;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(139, 111, 71, 0.15);
+        }
+
+        .skill-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .skill-card h3 {
+            color: #8b6f47;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .skill-card p {
+            color: #999;
+            font-size: 14px;
+            text-align: center;
+        }
+
+
+
+        /* Seção CTA */
+        .cta-pessoal {
+            background: linear-gradient(135deg, #8b6f47 0%, #a0845f 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .cta-pessoal h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .cta-pessoal p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: white;
+            color: #8b6f47;
+            padding: 14px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin: 0 10px;
+        }
+
+        .btn-cta:hover {
+            background: #f5e6d3;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 30px;
+            margin-top: 40px;
+        }
+
+        .footer p {
+            color: #ccc;
+            font-size: 14px;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .hero-pessoal h1 {
+                font-size: 28px;
+            }
+
+            .nav-menu {
+                gap: 15px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🌿 MoveisEco</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="paginavendedor.html">Vendas</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section Pessoal -->
+    <section class="hero-pessoal">
+        <h1>Bem-vindo(a)! 👋</h1>
+        <p class="titulo">Seu Nome Aqui</p>
+        <p>Apaixonado por móveis sustentáveis e design contemporâneo</p>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="about-section">
+        <h2>Quem Sou Eu</h2>
+        <div class="about-grid">
+            <div class="about-image">
+                <div class="avatar">🧑‍💼</div>
+            </div>
+            <div class="about-text">
+                <p>Vendedora especializada em móveis sustentáveis e design de interiores. Estou aqui para ajudá-lo a transformar seus espaços com soluções eco-amigáveis e elegantes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Habilidades -->
+    <section id="habilidades" class="skills-section">
+        <div class="skills-container">
+            <h2>Minhas Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>Design</h3>
+                    <p>Espaços modernos e funcionais</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">♻️</div>
+                    <h3>Sustentabilidade</h3>
+                    <p>Soluções eco-amigáveis</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🤝</div>
+                    <h3>Atendimento</h3>
+                    <p>Excelente atendimento ao cliente</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-pessoal">
+        <h2>Conheça Nossos Produtos</h2>
+        <p>Clique abaixo para explorar o catálogo</p>
+        <a href="paginavendedor.html" class="btn-cta">Ver Catálogo</a>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contato" class="footer">
+        <p>Email: seu.email@example.com | Telefone: (11) 9999-9999</p>
+        <p style="margin-top: 15px; border-top: 1px solid #555; padding-top: 15px; font-size: 12px;">
+            © 2026 MoveisEco
+        </p>
+    </footer>
+</body>
+</html>
